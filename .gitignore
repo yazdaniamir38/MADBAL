@@ -1,0 +1,6 @@
+*.pth
+*.sav
+*.pkl
+*.png
+*.jpg
+.DS_Store

@@ -1,0 +1,1 @@
+from .deeplabv3_resnet50 import deeplab_lossy_resnet50
