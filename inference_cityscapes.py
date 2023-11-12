@@ -258,10 +258,10 @@ def parse_arguments():
                         help='what device should be used for inference?')
     parser.add_argument('-d', '--device_id', default='', type=str,
                        help='indices of GPUs to enable (default: all)')
-    parser.add_argument('-da', '--dataloader', default=False, type=bool,
+    parser.add_argument('-da', '--dataloader', default=False, type=int,
                         help='using a dataloader?')
     parser.add_argument('-bs', '--bs', default=10, type=bool,
-                        help='using a dataloader?')
+                        help='batch size')
     args = parser.parse_args()
     os.environ["CUDA_VISIBLE_DEVICES"] = args.device_id
     return args

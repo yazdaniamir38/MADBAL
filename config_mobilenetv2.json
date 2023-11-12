@@ -1,0 +1,155 @@
+{
+    "active_learner": {
+        "args": {
+            "augment": false,
+            "base_size": 2048,
+            "batch_size": 6,
+            "data_dir": "../data/cityscapes/superpixels_quarter_16_16_measure/train/",
+            "edges": false,
+            "num_workers": 8,
+            "return_id": true,
+            "scale": false,
+            "split": "val",
+            "unlabelled": true,
+            "val": true
+        },
+        "type": "CityScapes_super_pixels"
+    },
+    "arch": {
+        "args": {
+            "backbone": "mobilenet",
+             "freeze_backbone": false,
+            "freeze_bn": false
+        },
+        "type": "DeepLab"
+    },
+    "ignore_index": 255,
+    "initialize_lossy": true,
+    "loss": "CrossEntropyLoss2d",
+    "lossy": true,
+    "lr_scheduler": {
+        "args": {
+            "warmup_epochs": 20
+        },
+        "type": "Poly"
+    },
+    "n_clusters": 9,
+    "n_gpu": 2,
+    "n_samples": 20,
+    "name": "mobilenetv2_cityscapes",
+    "optimizer": {
+        "args": {
+            "lr": 0.01,
+            "momentum": 0.9,
+            "weight_decay": 0.0001
+        },
+        "differential_lr": false,
+        "type": "SGD"
+    },
+    "train_loader": {
+        "args": {
+            "augment": true,
+            "base_size": 2048,
+            "batch_size": 10,
+            "blur": true,
+            "crop_size": 768,
+            "data_dir": "../data/cityscapes/superpixels_quarter_16_16_measure/train/imgs",
+            "edges": false,
+            "flip": true,
+            "num_workers": 4,
+            "ratio": 0.1,
+            "return_id": true,
+            "rotate": true,
+            "scale": false,
+            "shuffle": true,
+            "split": "train"
+        },
+        "type": "CityScapes_super_pixels"
+    },
+    "train_loader2": {
+        "args": {
+            "augment": true,
+            "base_size": 2048,
+            "batch_size": 12,
+            "blur": false,
+            "crop_size": 768,
+            "data_dir": "../data/cityscapes/superpixels_quarter_16_16_measure/train/imgs",
+            "edges": true,
+            "flip": true,
+            "num_workers": 1,
+            "ratio": 0.1,
+            "return_id": true,
+            "rotate": true,
+            "scale": false,
+            "shuffle": true,
+            "split": "train"
+        },
+        "type": "CityScapes_super_pixels"
+    },
+    "train_loader3": {
+        "args": {
+            "augment": true,
+            "base_size": 2048,
+            "batch_size": 10,
+            "blur": false,
+            "data_dir": "../data/cityscapes/superpixels_quarter_16_16_measure/train/imgs",
+            "edges": true,
+            "flip": false,
+            "num_workers": 2,
+            "ratio": 0.1,
+            "return_id": true,
+            "rotate": false,
+            "scale": false,
+            "shuffle": true,
+            "split": "train"
+        },
+        "type": "CityScapes_super_pixels"
+    },
+    "trainer": {
+        "early_stop": 15,
+        "epochs": 150,
+        "epochs2": 30,
+        "log_dir": "saved/runs_22",
+        "log_per_iter": 20,
+        "monitor": "max Mean_IoU",
+        "monitor_2": "min MSE",
+        "save_dir": "saved/22_tests/",
+        "save_period": 100,
+        "tensorboard": true,
+        "val": true,
+        "val_per_epochs1": 3,
+        "val_per_epochs2": 3
+    },
+    "use_synch_bn": false,
+    "val_loader": {
+        "args": {
+            "augment": false,
+            "base_size": 512,
+            "batch_size": 20,
+            "data_dir": "../data/cityscapes/gtFine_trainvaltest/gtFine/val",
+            "edges": true,
+            "num_workers": 1,
+            "ratio": 1,
+            "scale": false,
+            "split": "val",
+            "val": true
+        },
+        "type": "CityScapes_super_pixels"
+    },
+
+    "val_loader_2": {
+        "args": {
+            "augment": false,
+            "base_size": 512,
+            "batch_size": 5,
+            "data_dir": "../data/cityscapes/gtFine_trainvaltest/gtFine/val",
+            "edges": true,
+            "num_workers": 1,
+            "ratio": 1,
+            "scale": false,
+            "split": "val",
+            "val": true
+        },
+        "type": "CityScapes_super_pixels"
+    }
+}
