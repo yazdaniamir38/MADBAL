@@ -1,5 +1,5 @@
 # MADBAL [[BMVC 2023 Oral](https://bmvc2023.org)]
-This is an official implementation of the paper "All you need are a few pixels: semantic segmentation with PixelPick."
+This is an official implementation of the paper "Maturity-Aware Active Learning for Semantic Segmentation with Hierarchically-Adaptive Sample Assessment."
 
 
 [[Project page]](http://signal.ee.psu.edu/research/MADBAL.html)
