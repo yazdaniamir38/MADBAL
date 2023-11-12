@@ -67,7 +67,7 @@ __“step2.py”__: based on the calculated scores and assigned budgets to clust
 ##### Inference
 __“inference_cityscapes.py”/“inference_VOC.py”__: The scripts to test a trained model on a dataset with different methods such as sliding or multiscale predict (see the script for more details).
 
-Please download our trained model weights from here. Once downloaded, store the weights in "checkpoint/" and run:
+Please download our trained model weights from [here](https://drive.google.com/drive/folders/1L-g6uoNK5kM7LAEvDX6J6NiBsNcBCEfT?usp=share_link). Once downloaded, store the weights in "checkpoint/" and run:
 ```shell
 python inference_VOC.py --model checkpoints/weights_name.pth
 python inference_cityscapes.py --model checkpoints/weights_name.pth
