@@ -48,7 +48,7 @@ includes the scripts to preprocess the data for AL.
 
 __“extract_superpixels.py”__: we extract superpixels via SEEDS algorithm and store the details in dictionaries with different keys like: “valid indices” and “labels”.
 
-__“clustering.py”__: we fit a K-means clustering model on the superpixels. The superpixels are first fitted into a rectangular patch with size 16*16 (look at the class “super_pixel_loader_vgg_padding” for more details) and then fed to a pretrained VGG16 feature extraction network. The output is a vector of 512*1 which will be used by K-means.
+__“clustering.py”__: we fit a K-means clustering model on the superpixels. The superpixels are first fitted into a rectangular patch with size 16\*16 (look at the class “super_pixel_loader_vgg_padding” for more details) and then fed to a pretrained VGG16 feature extraction network. The output is a vector of 512\*1 which will be used by K-means.
 
 __“assign_clusters.py”__: once the clustering model is trained, the superpixels are assigned to a cluster. This information is added to their corresponding dictionary with the key “cluster”.
 ##### Train
