@@ -3,7 +3,7 @@ This is an official implementation of the paper "Maturity-Aware Active Learning 
 
 
 [[Project page]](http://signal.ee.psu.edu/research/MADBAL.html)
-[[Paper]](https://arxiv.org/abs/2104.06394 "Paper")
+[[Paper]](https://proceedings.bmvc2023.org/437/ "Paper")
 
 
 ### Table of contents
