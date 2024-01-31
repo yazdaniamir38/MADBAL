@@ -58,7 +58,7 @@ __“trainer.py”__: the actual forward propagation and backward propagation fo
 
 __“models”__: includes the scripts with class defining the architecture of our model with different backbones. 
 ##### Active learning
-includes the scrips for active sample assessment step.
+includes the scripts for active sample assessment step.
 
 __“step1.py”__: we feed all the samples to the trained model and store the uncertainty
 scores of the pixels, superpixels and clusters.
@@ -90,7 +90,7 @@ MADBAL|MobileNetv3|40 (0.031)|57.6 ± 0.2
 MADBAL|MobileNetv3|60 (0.046)|59.3 ± 0.3
 MADBAL|MobileNetv3|80 (0.061)|62.3 ± 0.2
 MADBAL|MobileNetv3|100 (0.076)|62.8 ± 0.1
-Fully-supervised|MobileNetv2|256x512 (100)| 68.5 ± 0.4
+Fully-supervised|MobileNetv3|256x512 (100)| 68.5 ± 0.4
 MADBAL|ResNet50|20 (0.015)|51.5 ± 0.5
 MADBAL|ResNet50|40 (0.031)|63.3 ± 0.2
 MADBAL|ResNet50|60 (0.046)|66.7 ± 0.3
